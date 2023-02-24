@@ -1,0 +1,30 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color-1: hsl(209, 100%, 88%);
+    --text-color-2: hsl(209, 100%, 92%);
+    --link-color:hsl(216, 100%, 56%);
+    --bg-1: hsl(219, 100%, 6%);
+    --bg-2: hsl(219, 63%, 36%);
+    --bg-center: hsl(219, 100%, 6%);
+    --bg-highlight: hsl(219, 100%, 9%);
+}
+
+html {
+    background-color: rgb(17, 17, 17);
+    color: #fff;
+}
+
+body {
+    overflow: hidden;
+}
+
+slyd {
+    background-color: var(--bg-1);
+    background-image: radial-gradient(circle, var(--bg-center) 33%, var(--bg-highlight) 100%);
+    background-position: 50%;
+    background-size: cover;
+}
