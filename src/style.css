@@ -5,7 +5,8 @@
 
 :root {
     --text-color-1: hsl(209, 100%, 88%);
-    --text-color-2: hsl(209, 100%, 92%);
+    --text-color-2: hsl(209, 100%, 90%);
+    --text-color-3: hsla(209, 100%, 92%, 0.9);
     --link-color:hsl(216, 100%, 56%);
     --list-marker-color: hsla(209, 100%, 92%, 0.55);
     --bg-1: hsl(219, 100%, 6%);
@@ -24,7 +25,15 @@ body {
     overflow: hidden;
 }
 
+a {
+    display: inline;
+}
+
 ul {
+    --fluid-type-min-size: 1.2;
+        --fluid-type-max-size: 2.2;
+        --fluid-type-min-screen: 20;
+        --fluid-type-max-screen: 88;
     list-style: disc;
     list-style-type: disc;
     padding: 0;
@@ -51,7 +60,7 @@ li ul {
     list-style: circle;
     list-style-type: circle;
     padding-left: 1ch;
-    font-size: max(1rem, 0.8em);
+    font-size: max(1rem, 0.6em);
 }
 
 slyd {
