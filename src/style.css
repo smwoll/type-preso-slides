@@ -7,10 +7,12 @@
     --text-color-1: hsl(209, 100%, 88%);
     --text-color-2: hsl(209, 100%, 92%);
     --link-color:hsl(216, 100%, 56%);
+    --list-marker-color: hsla(209, 100%, 92%, 0.55);
     --bg-1: hsl(219, 100%, 6%);
     --bg-2: hsl(219, 63%, 36%);
     --bg-center: hsl(219, 100%, 6%);
-    --bg-highlight: hsl(219, 100%, 9%);
+    --bg-highlight: hsl(219, 100%, 8%);
+    --scrollbar-thumb-color: hsla(209, 100%, 92%, 0.4);
 }
 
 html {
@@ -22,9 +24,57 @@ body {
     overflow: hidden;
 }
 
+ul {
+    list-style: disc;
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: list-item;
+}
+
+li::before {
+    content: unset;
+}
+
+li::marker {
+    color: var(--list-marker-color);
+    transition: color 400ms;
+}
+
+li:hover::marker {
+    color: var(--text-color-2);
+}
+
+li ul {
+    list-style: circle;
+    list-style-type: circle;
+    padding-left: 1ch;
+    font-size: max(1rem, 0.8em);
+}
+
 slyd {
     background-color: var(--bg-1);
     background-image: radial-gradient(circle, var(--bg-center) 33%, var(--bg-highlight) 100%);
     background-position: 50%;
     background-size: cover;
+}
+
+slyd-group::-webkit-scrollbar-track {
+    background-color: var(--bg-1);
+}
+
+slyd-group::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--bg-1);
+}
+
+slyd-group::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: var(--scrollbar-thumb-color);
+}
+
+slyd::-webkit-scrollbar-track {
+    background-color: var(--bg-1);
 }
