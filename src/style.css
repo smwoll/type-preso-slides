@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-    color: hsl(216, 100%, 56%);
+    color: hsl(216, 100%, 68%);
     text-decoration: underline;
     text-underline-offset: 0.25em;
 }
