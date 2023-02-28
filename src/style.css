@@ -27,7 +27,7 @@ body {
 
 slyds,
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif, system-ui;
 }
 
 slyd {
