@@ -29,6 +29,19 @@ a {
     display: inline;
 }
 
+quote {
+    --fluid-type-min-size: 1.1;
+    --fluid-type-max-size: 2;
+    --fluid-type-min-screen: 20;
+    --fluid-type-max-screen: 88;
+    font-size: calc(var(--fluid-type-min-size)*1rem + (var(--fluid-type-max-size) - var(--fluid-type-min-size))*(100vw - var(--fluid-type-min-screen)*1rem)/(var(--fluid-type-max-screen) - var(--fluid-type-min-screen)));
+    max-width: 90svw;
+}
+
+pre {
+    text-align: left;
+}
+
 ul {
     --fluid-type-min-size: 1.2;
         --fluid-type-max-size: 2.2;

@@ -22,45 +22,242 @@
     <div id="app">
 
         <slyds>
+            <!-- Intro -->
             <slyd>
                 <h1>Infinite, Unknowable Canvas</h1>
                 <h2>Turning Designs into Websites</h2>
                 <h4>Skyland Woll, Senior Engineer at Wide Eye</h4>
                 <aside><h6>Slides built with <a href="https://github.com/argyleink/slyd">Adam Argyle's Slyd.</a></h6></aside>
             </slyd>
-        
+            <!-- About -->
+            <slyd-group>
+                <slyd>
+                    <h2>About Me</h2>
+                    <ul>
+                        <li>Senior Engineer</li>
+                        <li>Try to help others, get people unstuck</li>
+                        <li>Solve the common problems we face; make life easier for everyone</li>
+                        <li>Make websites</li>
+                    </ul>
+                </slyd>
+                <slyd>
+                    <h2>Working with Engineers</h2>
+                    <ul>
+                        <li>Problem-solvers with a problem-solving mindset</li>
+                        <li>Can be cautious about scope and effort</li>
+                        <li>Try to keep best practices in mind</li>
+                        <li>All different: some more frontend/visual, some more data-oriented</li>
+                    </ul>
+                </slyd>
+                <slyd>
+                    <h2>Common Engineering Principles</h2>
+                    <ul>
+                        <li>DRY: Do Not Repeat Yourself
+                            <ul>
+                                <li>Components</li>
+                                <li>Avoiding repetition</li>
+                            </ul>
+                        </li>
+                        <li>Separation of concerns
+                            <ul>
+                                <li>Let respective tech take care of its business</li>
+                                <li>Let HTML handle markup, CSS handle styling, JS handle logic</li>
+                            </ul>
+                        </li>
+                        <li>Progressive enhancement</li>
+                        <li>Opinions and opinionated approaches</li>
+                    </ul>
+                </slyd>
+            </slyd-group>
+            <!-- The Web: rules and possibilities -->
             <slyd-group>
         
                 <slyd>
-                    <h1 uppercase>Slide 2</h1>
-                    <h2>is in a <span highlight>vertical</span> slide list</h2>
+                    <h2>The web has rules</h2>
+                    <p>Semantics, accessibility, and usablility must always be considered. </p>
+                    <p>We are making an interactive document that will live on a user's device for at least a moment.</p>
                 </slyd>
 
                 <slyd>
-                    <h1 uppercase>Slide 2.1</h1>
-                    <h2>is in a <span highlight>vertical</span> slide list</h2>
+                    <h2>The web can set you free</h2>
+                    <p>So much is possible in such a flexible, responsive medium.</p>
+                </slyd>
+
+                <slyd>
+                    <quote>
+                        Think for a moment of all the sites out there on the web. There’s a huge variation in visual style: colour schemes,
+                        typographic treatments, textures and layouts. All of that variety is made possible by one simple pattern that describes
+                        all the CSS ever written:
+                    </quote>
+                    <pre>
+                        <code class="language-css">
+                            selector {
+                                property: value;
+                            }
+                        </code>
+                    </pre>
+                    <quote>
+                        That's it.
+                    </quote>
+                    <cite>Jeremy Keith, <a href="https://resilientwebdesign.com/chapter2">Resilient Web Design</a></cite>
+                </slyd>
+
+                <slyd>
+                    <h2>For example</h2>
+                    <pre>
+                        <code class="language-css">
+                            .site-heading {
+                                font-size: 2.2rem;
+                            }
+                        </code>
+                    </pre>
+                    <h3>And more complex rules</h3>
+                    <pre>
+                        <code class="language-css">
+                            body {
+                                font-size: 1.2rem;
+                                font-family: sans-serif;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                letter-spacing: 0.01ch;
+                            }
+                        </code>
+                    </pre>
+                </slyd>
+        
+            </slyd-group>
+
+            <!-- Type -->
+            <slyd-group>
+                <slyd>
+                    <h2>Typography on the Web</h2>
                     <ul>
-                        <li>List item</li>
-                        <li>List item</li>
-                        <li>List item
+                        <li>There are some hard rules</li>
+                        <li>Opinions and best practices too</li>
+                        <li>Some gotchas</li>
+                    </ul>
+                </slyd>
+                <slyd>
+                    <h2>Accessibility + Usability</h2>
+                    <ul>
+                        <li>Readability and contrast
                             <ul>
-                                <li>List item</li>
-                                <li>List item</li>
-                                <li>List item</li>
+                                <li>Meet required min contrast for readable text</li>
+                                <li>WCAG Level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text.
+                                    <ul>
+                                        <li>Large text is defined
+                                        as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.</li>
+                                        <li>Many tools are available to test contrast</li>
+                                    </ul>
+                                </li>
+                                <li>Ensure body and readable text sections have usable line height (> 1.5)</li>
+                            </ul>
+                        </li>
+                        <li>Responsiveness and respect for user preference
+                            <ul>
+                                <li>Accommodate zoom</li>
+                                <li>Accommodate custom sizing, use REM and responsive units</li>
                             </ul>
                         </li>
                     </ul>
                 </slyd>
-        
-            </slyd-group>
-        
-            <slyd-group>
                 <slyd>
-                    <h1>Slide with Code</h1>
-                    <h2>subtitle</h2>
-                    <pre><code class="language-css">p { color: red }</code></pre>
+                    <h2>Gotchas</h2>
+                    <ul>
+                        <li>IOS Input Font sizing and forced zoom
+                            <ul>
+                                <li>
+                                    For this reason, always recommend using 1rem/16px or greater for input font sizing.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Font smoothing can be tricky
+                        </li>
+                        <li>
+                            Firefox rendering issues (hopefully going away soon)
+                        </li>
+                    </ul>
                 </slyd>
             </slyd-group>
+            <!-- Semantics -->
+
+            <slyd-group>
+                <slyd>
+                    <h2>Semantics</h2>
+                    <p>Make it make sense!</p>
+                </slyd>
+                <slyd>
+                    <h2>Structure and Meaning</h2>
+                    <ul>
+                        <li>HTML elements have meaning!</li>
+                        <li>Proper heading order is an a11y (accessiblity) requirement</li>
+                        <li>Must ensure HTML is built and nested properly
+                            <ul>
+                                <li>
+                                    Carefully consider what you put in your sandwich
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Good semantics conveys meaning to both users and developers
+                        </li>
+                    </ul>
+                </slyd>
+            </slyd-group>
+
+            <!-- Responsiveness -->
+
+            <slyd-group>
+                <slyd>
+                    <h2>Responsiveness</h2>
+                    <p>Having empathy for our users.</p>
+                </slyd>
+                <slyd>
+                    <h2>Responsive Sizing</h2>
+                    <ul>
+                        <li>Most common responsive consideration</li>
+                        <li>CSS Breakpoints and media queries</li>
+                        <li>Consider <strong>Intrinsic Responsiveness</strong>
+                        <ul>
+                            <li>Can a component be made to handle its own responsive concerns?</li>
+                            <li>
+                                Can a component do this is a "smart" way?
+                            </li>
+                            <li>
+                                Thinking in percentages, minimums, and maximums while ensuring good behavior in fluid, changing space can make for resilient components.
+                            </li>
+                        </ul></li>
+                    </ul>
+                </slyd>
+                <slyd>
+                    <h2>Other kinds of responsiveness</h2>
+                    <ul>
+                        <li>User needs and preference
+                            <ul>
+                                <li>Good accessibility practice is one way we respond to user needs</li>
+                                <li>
+                                    Reducing motion is another way to accommodate user needs with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">a reduced motion query</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Can also respond to user's light/dark mode preference
+                        </li>
+                    </ul>
+                </slyd>
+            </slyd-group>
+
+            <!-- Demo -->
+
+            <slyd>
+                <h2>Demo</h2>
+                <ul>
+                    <li>Interpreting a design</li>
+                    <li>Thinking in components</li>
+                    <li>Considering all the things!</li>
+                </ul>
+            </slyd>
 
             <slyd-group>
                 <slyd>
